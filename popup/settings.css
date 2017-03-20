@@ -1,0 +1,128 @@
+.settings {
+    background:#dadada;
+    max-height: 600px;
+    overflow: scroll;
+    display: none;
+    padding-bottom: 45px;
+}
+.settings label {
+    line-height: 36px;
+}
+.settings label span {
+    display: inline-block;
+    line-height: 19px;
+    vertical-align: middle;
+}
+.settings .box {
+    background:#FFF;
+    border-radius:4px;
+    padding:15px;
+    margin: 20px;
+}
+.settings h2 {
+    padding:6px 20px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+    font-size:26px;
+}
+.settings .notification-switch.settings-item:last-child,
+.settings .notification-switch.settings-item:last-child label{
+    margin-bottom: 0px;
+}
+.activity-feed-swichers{
+    opacity: 0.3;
+}
+.activity-feed-swichers.active{
+    opacity: 1.0;
+}
+.settings .switch {
+    border:1px solid #cbcaca;
+}
+.settings .settings-item label {
+    margin-left: 0px;
+}
+.settings .settings-item {
+    position:relative;
+    padding-right: 100px;
+    margin-bottom:20px;
+}
+.settings .settings-item .switch {
+    position:absolute;
+    line-height: 30px;
+    height: 30px;
+    width: 80px;
+    right:0;
+    top: 0;
+    border-radius: 15px;
+    cursor:pointer;
+}
+.settings .description {
+    color:#999;
+    text-align:left;
+}
+.settings .description a {
+    color: inherit;
+    text-decoration: underline;
+}
+.settings .settings-item .switch span.off{
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 14px;
+}
+.settings .settings-item .switch span.on{
+    border-top-left-radius: 14px;
+    border-bottom-left-radius: 14px;
+}
+.settings .settings-item .switch span.off,
+.settings .settings-item .switch span.on,
+.settings .settings-item .switch:after {
+    content:'';
+    width:50%;
+    position:absolute;
+    left:0;
+    background:transparent;
+    text-align:center;
+    font-size: 15px;
+    z-index:999;
+    top:0;
+    line-height: 28px;
+    height: 28px;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+    color:#FFF;
+}
+.settings .settings-item .switch-on span.off {
+    color:#cbcaca;
+}
+.settings .settings-item .switch-off span.on {
+    color:#cbcaca;
+}
+.settings .settings-item .switch span.off {
+    left:50%;
+}
+.settings .settings-item .switch:after {
+    background:#3cab41;
+    width:50%;
+    z-index:989;
+}
+.settings .settings-item .switch-off:after {
+    left:50%;
+    background: #DD2020;
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 14px;
+}
+.settings .settings-item .switch-on:after{
+    border-top-left-radius: 14px;
+    border-bottom-left-radius: 14px;
+}
+.settings .settings-item:last-child {
+    margin-bottom:10px;
+}
+.settings .activity-feed-swichers:not(.active) .switch-on:after, .activity-feed-swichers:not(.active) .switch-off:after{
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.settings .wrapper {
+    width: 585px;
+    min-width: 585px;
+}

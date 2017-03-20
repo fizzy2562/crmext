@@ -1,0 +1,138 @@
+#st-popup-container .st-popup-settings label {
+    line-height:24px;
+    font-size: 14px;
+}
+#st-popup-container .st-popup-settings h2 {
+    padding:6px 20px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+    font-size:26px;
+}
+#st-popup-container .st-popup-settings .st-settings-item:last-child,
+#st-popup-container .st-popup-settings .st-settings-item:last-child label {
+    margin-bottom: 0px;
+}
+#st-popup-container .activity-feed-swichers{
+    opacity: 0.3;
+}
+#st-popup-container .activity-feed-swichers.active{
+    opacity: 1.0;
+}
+#st-popup-container .st-popup-settings .switch {
+    border:1px solid #cbcaca;
+}
+#st-popup-container .st-popup-settings .st-settings-item {
+	position: relative;
+	margin-bottom: 10px;
+	display: flex;
+	padding: 0;
+	justify-content: space-between;
+	align-items:center;
+	padding-right:;
+}
+#st-popup-container .st-popup-settings .st-settings-item .st-setting-description {
+	flex-grow:1;
+	padding:3px 0;
+	font-size: 0;
+	display: inline-block;
+	line-height: 1;
+}
+#st-popup-container .st-popup-settings .st-settings-item .st-setting-description label,
+#st-popup-container .st-popup-settings .st-settings-item .st-setting-description span {
+    line-height: 16px;
+    font-size: 14px;
+    display: inline-block;
+}
+#st-popup-container .st-popup-settings .st-settings-item .st-setting-description label {
+	margin-bottom:0;
+    display: inline;
+    position: relative;
+    padding-right: 20px;
+}
+#st-popup-container .st-popup-settings .st-settings-item .st-setting-description span {
+    display: inline;
+    position: absolute;
+    display: block;
+    width: 14px;
+    height: 14px;
+    right: 2px;
+    bottom: 1px;
+}
+#st-popup-container .st-popup-settings .st-settings-item .switch {
+    position:relative;
+    line-height:24px;
+    height:24px;
+    width:70px;
+    right:0;
+    top:0;
+    border-radius:12px;
+    cursor:pointer;
+    background-color: #fff;
+	flex-shrink:0;
+}
+#st-popup-container .st-popup-settings .description {
+    color:#999;
+    text-align:justify;
+}
+#st-popup-container .st-popup-settings .st-settings-item .switch span.off{
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+#st-popup-container .st-popup-settings .st-settings-item .switch span.on{
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+#st-popup-container .st-popup-settings .st-settings-item .switch span.off,
+#st-popup-container .st-popup-settings .st-settings-item .switch span.on,
+#st-popup-container .st-popup-settings .st-settings-item .switch:after {
+    content:'';
+    width:50%;
+    position:absolute;
+    left:0;
+    background:transparent;
+    text-align:center;
+    font-size:12px;
+    z-index:999;
+    top:0;
+    line-height:22px;
+    height:22px;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+    color:#FFF;
+}
+#st-popup-container .st-popup-settings .st-settings-item .switch-on span.off {
+    color:#cbcaca;
+}
+#st-popup-container .st-popup-settings .st-settings-item .switch-off span.on {
+    color:#cbcaca;
+}
+#st-popup-container .st-popup-settings .st-settings-item .switch span.off {
+    left:50%;
+}
+#st-popup-container .st-popup-settings .st-settings-item .switch:after {
+    background:#3cab41;
+    width:50%;
+    z-index:989;
+}
+#st-popup-container .st-popup-settings .st-settings-item .switch-off:after {
+    left:50%;
+    background: #DD2020;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+#st-popup-container .st-popup-settings .st-settings-item .switch-on:after{
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+#st-popup-container .st-popup-settings .st-settings-item:last-child {
+    margin-bottom:10px;
+}
+#st-popup-container .st-popup-settings .activity-feed-swichers:not(.active) .switch-on:after, .activity-feed-swichers:not(.active) .switch-off:after{
+    background: rgba(0, 0, 0, 0.3);
+}
+
+#st-popup-container .st-popup-settings p {
+    padding-bottom: 25px;
+    font-size: 14px;
+}

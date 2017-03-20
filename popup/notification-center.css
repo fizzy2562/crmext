@@ -1,0 +1,536 @@
+/* General */
+
+html {
+    overflow: hidden;
+}
+body {
+    width: 600px;
+    margin: 0px auto;
+    padding: 0px;
+    background: #ebf0f2;
+    max-height: 600px;
+    overflow: hidden;
+    font-family: 'Lato', sans-serif;
+    cursor: default;
+}
+span.close {
+    display:block;
+    float: right;
+    color: #fff;
+    background: #354052;
+    border-radius: 100%;
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    font-family: tahoma;
+    padding-bottom: 1px;
+    padding-left: 1px;
+    position:relative;
+}
+span.close:after,
+span.close:before {
+    background: white;
+    height: 14px;
+    margin: -10px 0 0 -2px;
+    content: '';
+    width: 4px;
+    top: 14px;
+    left: 50%;
+    display: block;
+    position: absolute;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    transform: rotate(135deg);
+    border-radius:1px;
+}
+span.close:after {
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+/* Header */
+#main {
+    padding:20px 10px 12px;
+    background:#F8F9FA;
+}
+#header {
+    background: #3c4152 url(../images/st-logo.png) 20px bottom no-repeat;
+    font-size: 0;
+    background-size: 54px;
+    padding: 10px 0 10px 100px;
+    position: fixed;
+    width: 100%;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+#header:before {
+    content: '';
+    position: absolute;
+    top: -16px;
+    right: 30px;
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;
+    border-bottom: 16px solid #3c4152;
+}
+#header img {
+    display:inline-block;
+}
+#header .logo-socialtalent {
+    height: 33px;
+    padding: 5px;
+}
+#header h2 {
+    color: #f8983a;
+    font-size: 20px;
+    display: inline;
+    padding-left: 0px;
+    margin-left: 10px;
+    text-transform: uppercase;
+    position: relative;
+    top: -5px;
+}
+#header h2 small {
+    line-height: 10px;
+    font-size:9px;
+    color:#999;
+    position: relative;
+    top: -3px;
+}
+.st-icon-close,
+.st-icon-gear,
+.st-icon-question {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    background-size: contain;
+}
+.st-icon-close,
+.st-icon-gear {
+    -webkit-filter: brightness(65%);
+    filter: brightness(65%);
+}
+.st-icon-close {
+    background-image: url('/images/common/icon-close.svg');
+}
+.st-icon-gear {
+    background-image: url('/images/common/icon-gear.svg');
+    -webkit-transition: all 1.2s ease-out;
+    transition: all 1.2s ease-out;
+}
+.st-icon-gear-active {
+    -webkit-filter: brightness(140%);
+    filter: brightness(140%);
+    -webkit-transform: rotate(720deg);
+    transform: rotate(720deg);
+}
+.st-icon-question {
+    background-image: url('/images/common/icon-question.svg');
+}
+#header h2 .st-icon-question {
+    margin-left: 5px;
+    position: relative;
+    top: 3px;
+}
+#header-dummy{
+    height: 55px;
+}
+
+.color-line {
+    display: block;
+    height: 2px;
+    width: 100%;
+}
+.line-blue {
+    background:#299DCD;
+}
+.line-pink {
+    background:#e46f76;
+}
+.line-orange {
+    background:#da7b38;
+}
+.line-green {
+    background:#84bd6a;
+}
+.color-lines {
+    margin:0;
+}
+.color-lines .col3 {
+    padding:0;
+}
+
+.settings{
+    display: none;
+    max-height: 552px;
+    width: 100%;
+    background: #F8F9FA;
+    position: relative;
+}
+.settings h2{
+    font-weight: bold;
+    margin-left: 12px;
+    margin-bottom: 6px;
+    font-size: 24px;
+}
+.settings hr{
+    border: none;
+    border-top: solid #9a9da6 2px;
+    margin: 4px 10px 8px;
+}
+.settings .notification-switch{
+    margin-top: 10px;
+}
+.settings .wrapper{
+    padding: 20px;
+}
+.settings .activity-feed-swichers{
+    opacity: 0.3;
+    cursor: default;
+    margin-bottom: 10px;
+}
+.settings .activity-feed-swichers.active{
+    opacity: 1.0;
+}
+.settings .notification-switch{
+    
+}
+.settings .activity-feed-swichers label, .settings .notification-switch label{
+    font-weight: bold; margin-left: 12px;
+}
+.close-settings{
+    position: relative;
+    padding: 10px 272px;
+}
+.close-settings span.close{
+    position: absolute;
+    left: 242px;
+}
+.menu-bars {
+    position: absolute;
+    right: 50px;
+    cursor: pointer;
+    top: 50%;
+    margin-top: -13px;
+}
+.close-popup-button .st-icon-close {
+    position: absolute;
+    right: 18px;
+    top: 16px;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+.feed{
+	max-height: 500px;
+	overflow: auto;
+}
+.activity-feed {
+    
+}
+.activity-feed .close{
+    position: absolute;
+    top: 6px;
+    right: 6px;
+}
+.activity-feed .type-notification, .activity-feed .type-standard{
+    background-image: url(/images/st-logo.png);
+    background-repeat: no-repeat;
+    background-position: right -36px bottom 39px;
+    background-size: 74px;
+}
+.activity-feed .type-notification.no-ninja, .activity-feed .type-standard.no-ninja{
+    background-image: none;
+}
+.activity-feed .activity-thumbnail img {
+    width:100%;
+    height:auto;
+    display:block;
+}
+.activity-feed .activity-item {
+    background-color: #eaf1f8;
+    margin-bottom: 20px;
+    position: relative;
+}
+.activity-feed .activity-main {
+    padding: 15px 0 15px 15px;
+}
+.activity-feed .activity-item:last-child {
+    margin-bottom:0;
+}
+.activity-feed h3 {
+    /*
+    color: #2a67ab;
+    text-decoration: underline;
+    */
+    font-size: 18px;
+    line-height: 1.2;
+    padding-bottom: 10px;
+    max-width: 402px;
+}
+.activity-feed .activity-item .icon{
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+.activity-item .content {
+    padding:7px 0;
+    float: left;
+    margin-left: 8px;
+}
+.activity-item .content p{
+    font-size: 16px;
+    width: 430px;
+}
+.activity-item .content a {
+    color: #2a67ab;
+    text-decoration: underline;
+}
+.activity-item .activity-footer {
+    background:#C6DBED;
+    min-height:39px;
+    padding:5px 15px 5px 15px;
+}
+.activity-feed .menu {
+    position:relative;
+    height:26px;
+    display: inline-block;
+    width: 400px;
+}
+
+.activity-feed .menu a {
+    display: inline-block;
+    width: 27px;
+    height: 27px;
+    position: absolute;
+    z-index:10;
+    background-repeat:no-repeat;
+}
+/* ----- thumbs-up ----- */
+.activity-feed .menu a.thumbsup {
+    background: url(../images/ico-thumb-up.png) center 0 no-repeat, url(../images/ico-thumb-up-active.png) center 40px no-repeat;
+    background-size:contain;
+    left:0px;
+}
+.activity-feed .menu a.thumbsup:hover,
+.activity-feed .menu a.thumbsup.active {
+    background: url(../images/ico-thumb-up.png) center -40px no-repeat, url(../images/ico-thumb-up-active.png) center 0px no-repeat;
+    background-size:contain;
+}
+/* ----- thumbs-down ----- */
+.activity-feed .menu a.thumbsdown {
+    background: url(../images/ico-thumb-down.png) center 0 no-repeat, url(../images/ico-thumb-down-active.png) center 40px no-repeat;
+    background-size:contain;
+    left:38px;
+}
+.activity-feed .menu a.thumbsdown:hover,
+.activity-feed .menu a.thumbsdown.active {
+    background: url(../images/ico-thumb-down.png) center -40px no-repeat, url(../images/ico-thumb-down-active.png) center 0 no-repeat;
+    background-size:contain;
+}
+
+/* ----- smileyface ----- */
+.activity-feed .menu a.smileyface {
+    background: url(../images/ico-happy-face.png) center 0 no-repeat, url(../images/ico-happy-face-active.png) center 40px no-repeat;
+    background-size:contain;
+    left:76px;
+    display: none;
+}
+.activity-feed .menu a.smileyface:hover,
+.activity-feed .menu a.smileyface.active {
+    background: url(../images/ico-happy-face.png) center -40px no-repeat, url(../images/ico-happy-face-active.png) center 0 no-repeat;
+    background-size:contain;
+}
+/* ----- sadface ----- */
+.activity-feed .menu a.sadface {
+    background: url(../images/ico-sad-face.png) center 0 no-repeat, url(../images/ico-sad-face-active.png) center 40px no-repeat;
+    background-size:contain;
+    left:114px;
+    display: none;
+}
+.activity-feed .menu a.sadface:hover,
+.activity-feed .menu a.sadface.active {
+    background: url(../images/ico-sad-face.png) center -40px no-repeat, url(../images/ico-sad-face-active.png) center 0 no-repeat;
+    background-size:contain;
+}
+.activity-feed .menu a.active {
+    z-index:15;
+    display: inline-block;
+}
+
+.activity-feed .menu.menu-animated a {
+    -webkit-transition: all 0.6s ease-in-out;
+    -moz-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+}
+.activity-feed .menu .notice {
+    opacity:0;
+    display:block;
+    position: absolute;
+    left: 50px;
+    width: 300px;
+    color: #3c4152;
+    top: 50%;
+    font-size: 16px;
+    margin-top: -10px;
+    -webkit-transition: all 0.6s ease-in-out;
+    -moz-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+    z-index:5;
+}
+.activity-feed .menu.menu-complete .notice {
+    display:block;
+    opacity:1;
+}
+.activity-feed .menu.menu-choosen a {
+    left:0px;
+    cursor: default;
+}
+.activity-feed .time-shift{
+    float: right;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+.activity-feed .activity-item-learn h3 {
+    padding-right:100px;
+}
+.empty-notification{
+    display: none;
+}
+.notification.read{
+    background-color: #ffffff;  
+}
+.notification{
+    cursor: default;
+}
+.notification.withLink, .notification.withLink a{
+    cursor: pointer;
+}
+.notification:last-child{
+    margin-bottom: 0px;
+}
+.clear{
+	clear: both;
+}
+.hidden{
+	display: none !important;
+}
+.info{
+    font-family: 'Lato';
+    padding: 20px;
+    width: 578px;
+    font-size: 14px;
+    background: #ffffff;
+    color: #707070;
+    text-align: center;
+}
+.switch {
+    font-size: 12px;
+    font-family: 'Lato';
+    position: relative;
+}
+.switch label{
+    display: inline-block;
+    cursor: pointer;
+    font-size: 13px;
+    padding-top: 3px;
+    padding-left: 6px;
+}
+.switch img{
+    position: relative;
+    top: 7px;
+    left: 10px;
+    height: 22px;
+    cursor: pointer;
+    float: left;
+    border-radius: 14px;
+}
+.switch.disabled img, .switch.disabled label{
+    cursor: default;
+}
+.feed-loader{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 266px;
+}
+.socket-reconnect-info {
+    padding: 14px;
+    color: #E8A306;
+    background: #fdf5d4;
+    position: relative;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.socket-reconnect-info img {
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	top: 23px;
+	left: 25px;
+}
+.socket-reconnect-info span {
+	margin-left: 60px;
+    display: inline-block;
+    width: 480px;
+    line-height: 20px;
+}
+.socket-reconnect-info span a {
+	color: #E8A306;
+	text-decoration: underline dotted;
+}
+.socket-reconnect-info p {
+	margin-bottom: 0px;
+}
+.socket-reconnect-info .close{
+    position: absolute;
+    top: 18px;
+    right: 20px;
+}
+img.grayscale{
+    -webkit-filter: grayscale(100%);
+}
+.clearfix{
+    clear: both;
+}
+.not-visible{
+    visibility: hidden;
+}
+
+/* Tooltip */
+.st-tooltip-window {
+    text-align: left;
+    background: rgba(0,0,0,0.8);
+    color: #FFF;
+    font-size: 12px;
+    padding: 7px;
+    margin: 0;
+    border-radius: 5px;
+    box-shadow: none;
+    z-index: 999999991 !important;
+    position: fixed;
+}
+.ui-helper-hidden-accessible {
+    display: none;
+    visibility: hidden;
+}
+
+#socket-reconnect-info-link-details-trigger {
+    text-decoration: underline;
+}
+#error-code {
+    font-size: small;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 5px;
+}

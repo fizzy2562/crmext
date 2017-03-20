@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="/css/reset.css">
+		<link rel="stylesheet" type="text/css" href="notification-center.css">
+        <link rel="stylesheet" type="text/css" href="settings.css">
+		<link href="/css/lato.css?family=Lato:300,400,700" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<!-- It's here to avoid auto-focusing SocialTalents logo -->
+		<a href=""></a>
+		<header id="header">
+            <a href=""><img class="logo-socialtalent" src="/images/socialtalent-logo.png"></a>
+			<h2>
+				<span class="st-translatable" data-translation-key="ce-activity-feed-header">Activity Feed</span>
+				<span id="st-activity-feed-question-icon" class="st-icon-question st-tooltip hidden st-translatable" data-translation-key="ce-activity-feed-notifications-tooltip" data-translation-target="title" title="Give your colleagues a thumbs-up when they've completed Social Talent activities."></span>
+			</h2>
+			<span class="menu-bars st-icon-gear"></span>
+			<span class="close-popup-button">
+				<span class="st-icon-close"></span>
+			</span>
+		</header>
+		<div id="header-dummy">
+			<br>
+		</div>
+		<div class="row color-lines">
+			<div class="col3"><span class="color-line line-blue"></span></div>
+			<div class="col3"><span class="color-line line-pink"></span></div>
+			<div class="col3"><span class="color-line line-orange"></span></div>
+			<div class="col3"><span class="color-line line-green"></span></div>
+		</div>
+		<div class="feed" id="main">
+			<div class="info-warning socket-reconnect-info hidden">
+				<img src="/images/notify-icons/warning.png">
+                <span data-translation-key="ce-notification-connection-problem-message">
+                    Whoops! Looks like there's a problem connecting to the Social Talent server.
+                    <a href="#" id="socket-reconnect-info-link-details-trigger" data-translation-key="ce-click-here-label">Click here</a> to try refreshing.
+                </span>
+                <div id="error-code">#</div>
+            </div>
+			<div class="activity-feed notification-list">
+				<div class="activity-item notification empty-notification">
+					<div class="activity-main">
+						<div class="row">
+							<div class="activity-thumbnail icon">
+								<img src="/images/notify-icons/portal-linkedin.png">
+							</div>
+							<div class="content">
+								<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+								<p>Lorem ipsum dolor <a href="#">sit amet</a>, consectetur adipisicing elit.</p>
+							</div>
+						</div>
+					</div>
+					<div class="activity-footer">
+						<div class="menu menu-animated">
+							<a class="thumbsup" data-type="thumbsup" href="#"></a>
+							<a class="thumbsdown" data-type="thumbsdown" href="#"></a>
+							<a class="smileyface" data-type="smileyface" href="#"></a>
+							<a class="sadface" data-type="sadface" href="#"></a>
+							<span class="notice st-translatable" data-translation-key="ce-notification-sent-label">Notification Sent!</span>
+						</div>
+						<div class="time-shift"></div>
+						<div class="clearfix"></div>
+					</div>
+					<span class="close"></span>
+				</div>
+				<div class="info login-text hidden st-translatable" data-translation-key="ce-notification-not-logged-in-message">
+					You are not logged in. Please login to your account and try again.
+				</div>
+				<div class="info no-notifications hidden st-translatable" data-translation-key="ce-notification-not-found-message">
+					No notifications found.
+				</div>
+			</div>
+			<div class="feed-loader hidden">
+				<img src="/images/feed-loader.gif">
+			</div>
+		</div>
+		<div class="settings">
+			<div class="wrapper">
+				<div class="box">
+					<div class="notification-switch settings-item">
+						<label class="st-translatable" data-translation-key="ce-notification-settings-enable-title">Enable Notifications</label>
+						<div class="switch switch-off">
+							<span class="on st-translatable" data-translation-key="ce-switch-yes">Yes</span>
+							<span class="off st-translatable" data-translation-key="ce-switch-no">No</span>
+						</div>
+					</div>
+				</div>
+				<h2 class="st-translatable" data-translation-key="ce-notification-settings-header">Settings</h2>
+				<div class="box activity-feed-swichers">
+					<div class="settings-item">
+						<label>
+                            <span class="st-translatable" data-translation-key="ce-notification-settings-mission-completed-title">Mission completed</span>
+                        </label>
+						<p class="description st-translatable" data-translation-key="ce-notification-settings-mission-completed-description">
+							Notify me when a member of my team has completed an entire Mission in their training.
+						</p>
+						<div class="switch switch-off" data-name="user_missions">
+							<span class="on st-translatable" data-translation-key="ce-switch-on">On</span>
+							<span class="off st-translatable" data-translation-key="ce-switch-off">Off</span>
+						</div>
+					</div>
+					<div class="settings-item">
+						<label>
+                            <span class="st-translatable" data-translation-key="ce-notification-settings-course-completed-title">Course completed</span>
+                        </label>
+						<p class="description st-translatable" data-translation-key="ce-notification-settings-course-completed-description">
+							Notify me when a member of my team has completed an entire Course in their training.
+						</p>
+						<div class="switch switch-off" data-name="stats_courses">
+                            <span class="on st-translatable" data-translation-key="ce-switch-on">On</span>
+                            <span class="off st-translatable" data-translation-key="ce-switch-off">Off</span>
+						</div>
+					</div>
+					<div class="settings-item">
+						<label>
+                            <span class="st-translatable" data-translation-key="ce-notification-settings-exam-completed-title">Team member graduated / Exam completed</span>
+                        </label>
+                        <p class="description st-translatable" data-translation-key="ce-notification-settings-exam-completed-description">
+                            Notify me when a member of my team graduates / completed an exam.
+						</p>
+						<div class="switch switch-off" data-name="stats_exams_completed">
+                            <span class="on st-translatable" data-translation-key="ce-switch-on">On</span>
+                            <span class="off st-translatable" data-translation-key="ce-switch-off">Off</span>
+						</div>
+					</div>
+					<div class="settings-item">
+						<label>
+                            <span class="st-translatable" data-translation-key="ce-notification-settings-exam-attempt-title">Exam attempt</span>
+                        </label>
+                        <p class="description st-translatable" data-translation-key="ce-notification-settings-exam-attempt-description">
+							Notify me when a member of my team has attempted their exam.
+						</p>
+						<div class="switch switch-off" data-name="stats_exams_attempt">
+                            <span class="on st-translatable" data-translation-key="ce-switch-on">On</span>
+                            <span class="off st-translatable" data-translation-key="ce-switch-off">Off</span>
+						</div>
+					</div>
+					<div class="settings-item">
+						<label>
+                            <span class="st-translatable" data-translation-key="ce-notification-settings-first-search-with-sourcehub-today-title">First time search with SourceHub per day</span>
+                        </label>
+                        <p class="description st-translatable" data-translation-key="ce-notification-settings-first-search-with-sourcehub-today-description">
+                            Notify me when a member of my team uses Social Talent's SourceHub search tool.
+						</p>
+						<div class="switch switch-off" data-name="labs_synonym_histories_first_time_day">
+                            <span class="on st-translatable" data-translation-key="ce-switch-on">On</span>
+                            <span class="off st-translatable" data-translation-key="ce-switch-off">Off</span>
+						</div>
+					</div>
+					<div class="settings-item">
+						<label>
+                            <span class="st-translatable" data-translation-key="ce-notification-settings-first-search-without-sourcehub-today-title">First non Linkedin SourceHub Search today</span>
+                        </label>
+                        <p class="description st-translatable" data-translation-key="ce-notification-settings-first-search-without-sourcehub-today-description">
+                            Notify me when a member of my team opens up a search in a platform other than LinkedIn.
+						</p>
+						<div class="switch switch-off" data-name="labs_synonym_logs_first_time_day_wout_linkedin">
+                            <span class="on st-translatable" data-translation-key="ce-switch-on">On</span>
+                            <span class="off st-translatable" data-translation-key="ce-switch-off">Off</span>
+						</div>
+					</div>
+					<div class="settings-item">
+						<label>
+                            <span class="st-translatable" data-translation-key="ce-notification-settings-sourcing-lab-registration-title">Registration for Sourcing Labs</span>
+                        </label>
+                        <p class="description st-translatable" data-translation-key="ce-notification-settings-sourcing-lab-registration-description">
+                            Notify me when a member of my team registers for one of Social Talent's Sourcing Labs.
+						</p>
+						<div class="switch switch-off" data-name="extwebinar_users">
+                            <span class="on st-translatable" data-translation-key="ce-switch-on">On</span>
+                            <span class="off st-translatable" data-translation-key="ce-switch-off">Off</span>
+						</div>
+					</div>
+					<div class="settings-item">
+						<label>
+                            <span class="st-translatable" data-translation-key="ce-notification-settings-sourcing-lab-attends-title">Attends a Sourcing Lab</span>
+                        </label>
+                        <p class="description st-translatable" data-translation-key="ce-notification-settings-sourcing-lab-attends-description">
+                            Notify me when a member of my team attends one of Social Talent's Sourcing Labs.
+						</p>
+						<div class="switch switch-off" data-name="extwebinar_users_attends">
+                            <span class="on st-translatable" data-translation-key="ce-switch-on">On</span>
+                            <span class="off st-translatable" data-translation-key="ce-switch-off">Off</span>
+						</div>
+					</div>
+					<div class="settings-item">
+						<label>
+                            <span class="st-translatable" data-translation-key="ce-notification-settings-healh-drop-title">User's mission is overdue (health drop)</span>
+                        </label>
+                        <p class="description st-translatable" data-translation-key="ce-notification-settings-healh-drop-description">
+                            Notify me when a member of my teams engagement health has dropped and they have fallen behind schedule.
+						</p>
+						<div class="switch switch-off" data-name="cron_healthalerts_drop100">
+                            <span class="on st-translatable" data-translation-key="ce-switch-on">On</span>
+                            <span class="off st-translatable" data-translation-key="ce-switch-off">Off</span>
+						</div>
+					</div>
+					<div class="settings-item">
+						<label>
+                            <span class="st-translatable" data-translation-key="ce-notification-settings-user-logs-first-time-title">User logs on the very first time</span>
+                        </label>
+                        <p class="description st-translatable" data-translation-key="ce-notification-settings-user-logs-first-time-description">
+                            Notify me when a member of my team logs in for the very first time.
+						</p>
+						<div class="switch switch-off" data-name="users_first_login">
+                            <span class="on st-translatable" data-translation-key="ce-switch-on">On</span>
+                            <span class="off st-translatable" data-translation-key="ce-switch-off">Off</span>
+						</div>
+					</div>
+                    <div class="settings-item">
+                        <label>
+                            <span class="st-translatable" data-translation-key="ce-notification-settings-first-time-job-site-title">First job site search of the day</span>
+                        </label>
+                        <p class="description">
+                            Notify me when a member of my team performs a search on the list of <a id="job-sites-list-anchor" href="#" target="_blank">job sites</a> monitored by SourceHub.
+                        </p>
+                        <div class="switch switch-off" data-name="harvester_log_first_time_day">
+                            <span class="on st-translatable" data-translation-key="ce-switch-on">On</span>
+                            <span class="off st-translatable" data-translation-key="ce-switch-off">Off</span>
+                        </div>
+                    </div>
+				</div>
+			</div>
+		</div>
+        <script type="text/javascript" src="/dist/js/vendors.js"></script>
+        <script type="text/javascript" src="/dist/js/scripts.common.js"></script>
+        <script type="text/javascript" src="/dist/js/scripts.popup.js"></script>
+	</body>
+</html>
