@@ -1,0 +1,74 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Support Options | Dux-Soup</title>
+        <link href="bootstrap.min.css" rel="stylesheet">
+        <link href="cover.css" rel="stylesheet">
+        <link href="toastr.min.css" rel="stylesheet">
+<style type="text/css">
+
+<!--
+body,td,th {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #333;
+}
+.PoweredBy {
+	font-size: 10px;
+}
+body {
+	background-color: #FFF;
+}
+.beta{
+    display:none;
+}
+-->
+</style></head>
+
+<body style="margin-top:50px;">
+    <table cols="3" width="50%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+            <td colspan="3" align="center">
+                <p><img src="icon-122.png" width="122" height="122" /></p>
+                <p><strong>Dux-Soup Support options:</strong></p>
+                <hr>
+            </td>
+        </tr>
+        <tr>
+            <td width="15%">&nbsp;</td><td>
+                <h3>Reload Configuration</h3>
+                Click to reload the Dux-Soup configuration: <input type="submit" id="reload" value="Reload" class="btn btn-lg btn-default activity"> <br/>
+            </td><td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td width="15%">&nbsp;</td><td>
+                <h3>Technical Support</h3>
+                <input type="checkbox" id="debugmode" value="debugmode"> Enable debug mode <br>
+                <input type="checkbox" id="debuglog" value="debuglog"> Enable debug- and info-logmessages<br>
+                <input type="checkbox" id="logstack" value="logstack"> Log call stack for all log-events, must include : <input type="text" id="logstackfilter" placeholder="enter filter"/>.<br>
+
+            </td><td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="3" align="center"><br/>
+                <em>Changes are automatically saved and take effect immediately. Options marked Pro are ignored in the Starter Edition.</em><br/></br>
+                <p><strong>Your userid: </strong><span id="userid"></span>.</p>
+                <p><strong>Your clientid: </strong><span id="clientid"></span>.</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" align="center"><br/>
+            <hr/><br/><br/><a target="_blank" href="https://twitter.com/DuxQuack"><img src="twitter.png"/></a> for the latest Dux-Soup news, updates and service alerts.</p>
+            </td>
+        </tr>
+    </table>
+   <script src="jquery-2.1.4.min.js"></script>
+    <script src="toastr.min.js"></script>
+    <script src="options.js"></script>
+</body>
+</html>
+
+
+

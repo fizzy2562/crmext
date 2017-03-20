@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Dux Soup</title>
+        <link href="bootstrap.min.css" rel="stylesheet">
+        <link href="cover.css" rel="stylesheet">
+        <link rel="stylesheet" href="popup.css">
+    </head>
+    <body style="margin-top:5px">
+            <div style="float:right;">
+                <a id="options" href="#" tabindex="-1">options</a>&nbsp;&nbsp;|&nbsp;
+                <a id="about" href="#" tabindex="-1">about</a>&nbsp;&nbsp;|&nbsp;
+                <span style="color:#888" id="version"></span>
+           </div>
+
+            <div style="float:left"><img src="icon-large.png" style="margin-right:10px;"></div>
+            <div style="width:70%;float:right;margin-right:6px;margin-bottom:12px;font-size:24px;font-weight:400">
+                 <span id="recentrecords"></span><br/>
+                 <span id="todayrecords" style="font-size:smaller"></span></br>
+            </div>
+
+            <hr style="width:100%">
+                <table cellspacing="10px">
+                <tr><td><input type="submit" id="advanced" value="Visit Profiles" class="btn btn-lg btn-default activity" disabled="true"></td><td class="lead">Visit profiles in the current result page, records their details too (*).</td></tr>
+                <tr><td><input type="submit" id="basic" value="Scan Profiles" class="btn btn-lg btn-default activity" disabled="true"></td><td class="lead">Record profiles without visiting.</td></tr>
+                <tr><td><input type="submit" id="stop" value="Stop Robot" class="btn btn-lg btn-default activity" disabled></td><td class="lead">Stop the ongoing automated action. </td></tr>
+                <tr><td><input type="submit" id="download" value="Download Data" class="btn btn-lg btn-default activity" disabled></td><td class="lead">Download the captured profiles. </td></tr>
+                <tr><td><input type="submit" id="upload" value="Revisit Data" class="btn btn-lg btn-default activity" disabled></td><td class="lead">Upload a file for revisiting. </td></tr>
+                <tr><td><input type="submit" id="tagsearch" value="Search by Tag" class="btn btn-lg btn-default activity" disabled></td><td class="lead">Find previously tagged profiles. </td></tr>
+                <tr><td><input type="submit" id="reset" value="Clear Data" class="btn btn-lg btn-default activity" disabled></td><td class="lead">Reset the recorder. <br><span style="font-size:12px;font-style: italic">(does not affect visit history)</span> </td></tr>
+                </table>
+                <br/>
+                <p  class="lead" style="font-size:12px;font-style: italic">*: only available when the Dux icon colours green, indicating that the browser is displaying a <i>People</i>-search result. Hit <strong>Stop Robot</strong> to stop the automated action.</p>
+        <script src="popuptools.js"></script>
+        <script src="popupactions.js"></script>
+        <script src="dynamicpopup.js"></script>
+    </body>
+</html>

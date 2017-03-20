@@ -1,0 +1,183 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Options | Dux-Soup</title>
+        <link href="bootstrap.min.css" rel="stylesheet">
+        <link href="cover.css" rel="stylesheet">
+        <link href="toastr.min.css" rel="stylesheet">
+<style type="text/css">
+
+<!--
+body,td,th {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #333;
+}
+.PoweredBy {
+	font-size: 10px;
+}
+body {
+	background-color: #FFF;
+}
+.beta{
+    display:none;
+}
+-->
+</style></head>
+
+<body style="margin-top:50px;">
+    <table cols="3" width="50%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+            <td colspan="3" align="center">
+                <p><img src="icon-122.png" width="122" height="122" /></p>
+                <p><strong>Dux-Soup options:</strong></p>
+                <hr>
+            </td>
+        </tr>
+        <tr>
+            <td width="15%">&nbsp;</td><td>
+                <h3>Automation Rules</h3>
+                <span class="beta"><input type="checkbox" id="buymail" value="buymail"> Use Dux-Soup points to lookup the email address of any profile you visit, automatically and manually. (Pro only, <a id="buy" target="_blank" href="dux-store.html"> buy points)</a>.<br></span>
+                <input type="checkbox" id="autoendorse" value="autoendorse"> Automatically endorse  <select id="autoendorsetarget">
+                    <option value="5">Top 5</option>
+                    <option value="3">Top 3</option>
+                    <option value="1">Top 1</option>
+                    <option value="-1">Bottom 1</option>
+                    <option value="-3">Bottom 3</option>
+                    <option value="-5">Bottom 5</option>
+                </select> skill(s) of a profile when visiting (Pro only).<br>
+                <input type="checkbox" id="expand" value="expand"> Automatically expand the 'Contact' tab when visiting a profile<br>
+                <input type="checkbox" id="autotagflag" value="autotagflag"> Autotag profiles as &#8220;<input type="text" id="autotagvalue" placeholder="type your tag"/>&#8221; when auto-visiting.<br>
+            </td><td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td width="15%">&nbsp;</td><td>
+                <h3>Skipping Rules</h3>
+                <input type="number" min="0" max="31" step="1" style="width: 3em;" id="skipdays" value="7"> Number of days before revisiting. <span style="font-size:smaller;font-style:italic">(0 to 31)</span><br>
+ <!--               <input type="checkbox" id="skipnoname" value="skipnoname"> Skip visit when the name is unknown.<br> -->
+                <input type="checkbox" id="skipnoimage" value="skipnoimage"> Skip visit when the photo is blank.<br>
+            </td><td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td width="15%">&nbsp;</td><td>
+                <h3>Display Options</h3>
+                Show Notifications: <input type="checkbox" id="infonotifications" value="infonotifications"> Info |
+                <input type="checkbox" id="actionnotifications" value="actionnotifications"> Action |
+                <input type="checkbox" id="warningnotifications" value="warningnotifications"> Warning <br>
+                Display <select id="badgedisplay">
+                    <option value="visits">today's visit count</option>
+                    <option value="captures">captured profile count</option>
+                    <option value="nothing">nothing</option>
+                </select> in Dux-Soup Badge.
+            </td><td>&nbsp;</td>
+        </tr>        <tr>
+            <td width="15%">&nbsp;</td><td>
+                <h3>Download Options</h3>
+                <input type="checkbox" id="csvhint" value="csvhint"> Include Excel CSV hint <span style="font-size:smaller;font-style:italic">( tells MS Excel we're using a ',' as column separator )</span> <br>
+                Character Encoding : <select id="csvencoding">
+                    <option value="utf-8">UTF-8</option>
+                    <option value="windows-1252">ANSI</option>
+                </select> <span style="font-size:smaller;font-style:italic"> ( use ANSI for MS Excel, otherwise use UTF-8 )</span> <br>
+            </td><td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td width="15%">&nbsp;</td><td>
+                <h3>Visiting Speed  (Pro only)</h3>
+                <select id="throttletime">
+                <!-- around 6 second overhead (network & rendering) just loading the profile and the result page for each view --> 
+                    <option value="30000">Slower : under 50 per hour</option>
+                    <option value="15000">Slow : under 100 per hour</option>
+                    <option value="3000">Medium : around 300 per hour</option>
+                    <option value="100">Fast : over 500 per hour</option>
+                    <option value="1">Random : between 50 and 150 per hour</option>
+                </select><br/>
+                Pause for <input type="number" min="0" max="60" step="1" style="width: 3em;" id="waitminutes" value="0"> minutes <span style="font-size:smaller;font-style:italic">(0 to 60)</span> after every  <input type="number" min="0" max="100" step="1" style="width: 3em;" id="waitvisits" value="10"> visits <span style="font-size:smaller;font-style:italic">(1 to 100)</span><br>
+
+            </td><td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td width="15%">&nbsp;</td><td>
+                <h3>Limit Daily Visits (Pro only)</h3>
+                <p  class="lead" style="font-size:12px;font-style: italic; color:#ff4444">WARNING! Changing this setting to a higher level than your LinkedIn subscription could lead to LinkedIn blocking your account due to excessive profile visiting. Handle with care!</p>
+                <p  class="lead" style="font-size:12px;font-style: italic; color:#000000">Check to confirm you understand the risk! <input type="checkbox" id="warning" value="warning"> </p>
+                <select id="maxvisits" disabled="true" style="color:#999999">
+                    <option value="0">Detect : Leave it to the Dux</option>
+                    <option value="50">up to 50 visits per day</option>
+                    <option value="100">up to 100 visits per day</option>
+                    <option value="150">Free LinkedIn: up to 150 visits per day</option>
+                    <option value="200">up to 200 visits per day</option>
+                    <option value="250">New Sales Navigator: up to 250 visits per day</option>
+                    <option value="300">up to 300 visits per day</option>
+                    <option value="400">Business Plus: up to 400 visits per day</option>
+                    <option value="500">Old Sales Navigator: up to 500 visits per day</option>
+                    <option value="600">Recruiter: up to 600 visits per day</option>
+                    <option value="800">up to 800 visits per day</option>
+                    <option value="1000">up to 1000 visits per day</option>
+                    <option value="1200">up to 1200 visits per day</option>
+                    <option value="1500">up to 1500 visits per day</option>
+                </select><br/><br/>
+                <input type="checkbox" id="snooze" value="snooze"> Snooze the robot at the daily limit, and continue at midnight GMT. <span style="font-size:smaller;font-style:italic">( uncheck to stop the robot )</span> <br>
+            </td><td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td width="15%">&nbsp;</td><td>
+                <h3>Computer Performance & Network Speed</h3>
+                <select id="pageinitdelay">
+                    <option value="1500">Aston Martin</option>
+                    <option value="4000">BMW</option>
+                    <option value="9000">2CV</option>
+                </select>
+                computer spec, 
+                <select id="maxpageloadtime">
+                    <option value="10000">Glass</option>
+                    <option value="20000">Copper</option>
+                    <option value="30000">String</option>
+                </select>
+                network grade.<br/><br/>
+                <p  class="lead" style="font-size:12px;font-style: italic; color:#000000">Decrease computer spec in case of browser crashes, decrease network grade in case of missing records in CSV. Increase either to speed up Dux-Soup.</p>
+            </td><td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td width="15%">&nbsp;</td><td>
+                <h3>External License</h3>
+                Licensed Product: <select style="margin-bottom:5px" id="xlicenseproductid">
+                    <option value="">N/A</option>
+                    <option value="166686">6 Month Bundle</option>
+                    <option value="166477">12 Month Bundle</option>
+                </select><br/>
+                
+                License Key: <input type="text" id="xlicensekey"> <br/>
+                <div style="display:none">
+                Expires on: <span id="xlicenseexpiry"></span><br/>
+                <span id="xlicensemessage"></span><br/></div>
+            </td><td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td width="15%">&nbsp;</td><td>
+                <h3>Reload Configuration</h3>
+                Click to reload the Dux-Soup configuration: <input type="submit" id="reload" value="Reload" class="btn btn-lg btn-default activity"> <br/>
+            </td><td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="3" align="center"><br/>
+                <em>Changes are automatically saved and take effect immediately. Options marked Pro are ignored in the Starter Edition.</em><br/></br>
+                <p><strong>Your userid: </strong><span id="userid"></span>.</p>
+                <p><strong>Your clientid: </strong><span id="clientid"></span>.</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" align="center"><br/>
+            <hr/><br/><br/><a target="_blank" href="https://twitter.com/DuxQuack"><img src="twitter.png"/></a> for the latest Dux-Soup news, updates and service alerts.</p>
+            </td>
+        </tr>
+    </table>
+   <script src="jquery-2.1.4.min.js"></script>
+    <script src="toastr.min.js"></script>
+    <script src="options.js"></script>
+</body>
+</html>
+
+
+
