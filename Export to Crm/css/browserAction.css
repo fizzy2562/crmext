@@ -1,0 +1,295 @@
+@import url("lib/toggle-switch.css");
+
+html {
+	display: table;
+	/*height: 100%;*/
+	width: 100%;
+}
+
+body {
+	display: table-cell;
+	padding: 10px; /*20px 10px 10px;*/ /*TODO: uncomment*/
+	margin: 0;
+	font-family: Helvetica, Ubuntu, Arial, sans-serif;
+	font-size: 18px;
+	text-align: center;
+	vertical-align: middle;
+
+	box-sizing: content-box;
+	border: none;
+	color: rgba(255,255,255,1);
+	background: -webkit-linear-gradient(135deg, rgba(0,0,0,0) 25%, rgba(255,255,255,0.1) 25%, rgba(255,255,255,0.1) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, rgba(255,255,255,0.1) 75%), -webkit-linear-gradient(45deg, rgba(0,0,0,0) 25%, rgba(255,255,255,0.1) 25%, rgba(255,255,255,0.1) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, rgba(255,255,255,0.1) 75%), rgb(0, 161, 224);
+	background: -moz-linear-gradient(-45deg, rgba(0,0,0,0) 25%, rgba(255,255,255,0.1) 25%, rgba(255,255,255,0.1) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, rgba(255,255,255,0.1) 75%), -moz-linear-gradient(45deg, rgba(0,0,0,0) 25%, rgba(255,255,255,0.1) 25%, rgba(255,255,255,0.1) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, rgba(255,255,255,0.1) 75%), rgb(0, 161, 224);
+	background: linear-gradient(-45deg, rgba(0,0,0,0) 25%, rgba(255,255,255,0.1) 25%, rgba(255,255,255,0.1) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, rgba(255,255,255,0.1) 75%), linear-gradient(45deg, rgba(0,0,0,0) 25%, rgba(255,255,255,0.1) 25%, rgba(255,255,255,0.1) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, rgba(255,255,255,0.1) 75%), rgb(0, 161, 224);
+	background-position: auto auto;
+	background-origin: padding-box;
+	background-clip: border-box;
+	background-size: 100px 100px;
+	background-position-y: 25px;
+}
+
+hr {
+	border-top: 0;
+	border-bottom: 1px solid #fff;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.user-button-container {
+	white-space: nowrap;
+}
+.user-info {
+	background: rgba(0, 121, 194, 0.4);
+	display: inline-block;
+	font-size: 14px;
+	line-height: 1.2;
+	padding: 5px;
+	white-space: nowrap;
+}
+
+.login-button, .logout-button {
+	/*background: #f7ca18;*/
+	background: rgba(0, 121, 194, 1);
+	border: 0;
+	box-sizing: content-box;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 14px;
+	line-height: 1.2;
+	outline: none;
+	padding: 5px;
+	position: relative;
+	/*text-shadow: 1px 1px 1px rgba(0, 121, 194, 1);*/
+	top: 0px;
+	white-space: nowrap;
+}
+.logout-button:hover, .logout-button:active  {
+	background: rgba(0, 121, 194, 0.8);
+}
+.login-button {
+	background: #f7ca18;
+	text-shadow: 1px 1px 1px rgba(217,182,17, 1);
+	position: relative;
+	/*top: -5px;*/ /*TODO: uncomment*/
+}
+.login-button:hover, .login-button:active  {
+	background: #f1c309;
+}
+
+/* Settings */
+.settings-header {
+	font-size: 14px;
+	margin-bottom: 0.75em;
+}
+.ui-pref-toggle {
+	/*background: rgba(255,255,255,0.25);*/
+	/*background: rgba(0, 121, 194,0.4);*/
+	background: rgba(255, 255, 255, 0.8);
+	font-size: 14px;
+	min-width: 250px;
+	width: 100%;
+}
+.ui-pref-toggle > span span, .ui-pref-toggle input + label {
+	line-height: 1;
+}
+.ui-pref-toggle input:focus ~ a,
+.ui-pref-toggle input:focus + label {
+	outline: 0;
+}
+.ui-pref-toggle a {
+	background: #f7ca18;
+	/*background: #60c4eb;*/
+}
+.ui-pref-toggle label {
+	color: rgba(0, 121, 194, 1);
+	cursor: pointer;
+}
+.ui-pref-toggle input:checked + label {
+	cursor: default;
+	/*text-shadow: 1px 1px 1px rgba(217, 182, 17, 0.8);*/
+	/*text-shadow: 1px 1px 0px rgba(0, 121, 194, 0.4);;*/
+}
+.initializing .switch-toggle a {
+	-webkit-transition: none;
+	transition: none;
+}
+
+.api-warning {
+	color: #2c3e50;
+	font-size: 14px;
+	line-height: 1.2;
+	padding-top: 5px;
+}
+
+@-webkit-keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+@-o-keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+@keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+.progress {
+  height: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+          box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+}
+.progress-bar {
+  float: left;
+  width: 0;
+  height: 100%;
+  font-size: 12px;
+  line-height: 20px;
+  color: #fff;
+  text-align: center;
+  background-color: #337ab7;
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+          box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+  -webkit-transition: width .6s ease;
+       -o-transition: width .6s ease;
+          transition: width .6s ease;
+}
+.progress-striped .progress-bar,
+.progress-bar-striped {
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+  background-image:      -o-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+  background-image:         linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+  -webkit-background-size: 40px 40px;
+          background-size: 40px 40px;
+}
+.progress.active .progress-bar,
+.progress-bar.active {
+  -webkit-animation: progress-bar-stripes 2s linear infinite;
+       -o-animation: progress-bar-stripes 2s linear infinite;
+          animation: progress-bar-stripes 2s linear infinite;
+}
+.progress-bar-success {
+  background-color: #5cb85c;
+}
+.progress-striped .progress-bar-success {
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+  background-image:      -o-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+  background-image:         linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+}
+.progress-bar-info {
+  background-color: #5bc0de;
+}
+.progress-striped .progress-bar-info {
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+  background-image:      -o-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+  background-image:         linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+}
+.progress-bar-warning {
+  background-color: #f0ad4e;
+}
+.progress-striped .progress-bar-warning {
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+  background-image:      -o-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+  background-image:         linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+}
+.progress-bar-danger {
+  background-color: #d9534f;
+}
+.progress-striped .progress-bar-danger {
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+  background-image:      -o-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+  background-image:         linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+}
+
+
+.job {
+	margin-bottom: 5px;
+}
+.job:first-child {
+	margin-top: 5px;
+}
+.job .progress {
+	margin: 0;
+	position: relative;
+	vertical-align: middle;
+}
+.job .progress-bar {
+	box-sizing: border-box;
+	white-space: nowrap;
+}
+.job .progress-bar.active {
+	min-width: 5%;
+}
+.job .progress-bar.progress-bar-striped {
+	color: white !important;
+	font-weight: 300;
+	text-indent: 5px;
+	text-shadow: -1px -1px 0 #5bc0de, 1px -1px 0 #5bc0de, -1px 1px 0 #5bc0de, 1px 1px 0 #5bc0de, 0px 1px 0 #5bc0de, 0px -1px 0 #5bc0de, 1px 0px 0 #5bc0de, -1px 0px 0 #5bc0de;
+}
+
+.job .control {
+	color: #fff;
+}
+
+.job .dismiss {
+	color: #fff;
+	position: absolute;
+	right: 5px;
+	text-decoration: none;
+}
+
+#job-details {
+	height: 100%;
+}
+#job-details body {
+	color: #333;
+	text-align: left;
+}
+
+.job-details-container {
+	background: #fff;
+	height: 100%;
+	padding: 15px;
+	width: 100%;
+}
+.job-details-table {
+	margin: 0;
+}
+.job-details-table .fail {
+	background: #fbe7e4;
+}
+.job-details-table .fail:nth-of-type(odd) {
+	background: #f9dbd7;
+}
+.job-details-table .skipped {
+	background: #fcf8e3;
+}
+.job-details-table .skipped:nth-of-type(odd) {
+	background: #faebcc;
+}
+.job-details-table .fail-cell {
+	color: #ec5651;
+}
+.job-details-table .skipped-cell {
+	color: #8a6d3b;
+}
+.no-link {
+	pointer-events: none;
+	text-decoration: none;
+}

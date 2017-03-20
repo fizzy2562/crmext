@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+	<title>Export To CRM</title>
+	<link rel="stylesheet" href="/css/browserAction.css">
+</head>
+<body>
+	<div class="user-button-container">
+		<span id="js-email" class="user-info">current user</span><button class="js-logout logout-button" type="button">Log Out</button>
+	</div>
+	<div id="js-no-api" class="api-warning" style="display:none;">
+		Some features will be unavailable without API access
+	</div>
+	<!--TODO: uncomment after adding lightning UI support for Account export-->
+	<!--<hr>
+	<form class="js-settings initializing">
+		<div class="settings-header">Salesforce UI Preference</div>
+		<div class="ui-pref-toggle switch-toggle switch-android switch-3">
+			<input id="js-ui-lightning" class="js-setting-option" name="ui" type="radio" value="lightning">
+			<label for="js-ui-lightning">Lightning</label>
+
+			<input id="js-ui-automatic" class="js-setting-option" name="ui" type="radio" value="automatic">
+			<label for="js-ui-automatic">Automatic</label>
+
+			<input id="js-ui-classic" class="js-setting-option" name="ui" type="radio" value="classic">
+			<label for="js-ui-classic">Classic</label>
+
+			<a></a>
+		</div>
+	</form>-->
+	
+	<div id="js-progress-container">
+	</div>
+
+	<script src="/js/lib/bundle/core.js"></script>
+	<script src="/js/browserAction.js"></script>
+</body>
+</html>

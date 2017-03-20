@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+	<title>Export To CRM - Login Success</title>
+	<link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+	<!-- Success message is displayed if login succeeds -->
+	<div id="js-success-message" class="callback-message">
+		<h1>Awesome! You're almost ready to use Export&nbsp;To&nbsp;Salesforce.</h1>
+		<p>
+			Just click Next to see how to use the tool.
+		</p>
+		<div>
+			<a href="/html/firstPopup/linkedinInstructions.html" class="js-next submit">Next &raquo;</a>
+		</div>
+	</div>
+
+	<!-- Denied message is displayed if user denies access to our app -->
+	<div id="js-denied-message" class="callback-message">
+		<h1>Sorry, it looks like you denied us. :(</h1>
+		<p>
+			You won't be able to use Export&nbsp;to&nbsp;Salesforce until you allow access.
+		</p>
+		<button class="js-login-again submit">Login Again</button>
+	</div>
+
+	<!-- Error message is displayed if some unhandled error occurs -->
+	<div id="js-error-message" class="callback-message">
+		<h1>Uh oh, something went wrong! :(</h1>
+		<p>
+			Something unexpected happened while logging you in. Please try again.
+		</p>
+		<button class="js-login-again submit">Login Again</button>
+	</div>
+
+	<script src="/js/lib/bundle/core.js"></script>
+	<script src="/js/registerPopup.js"></script>
+</body>
+</html>

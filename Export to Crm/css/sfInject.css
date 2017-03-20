@@ -1,0 +1,35 @@
+#e2c--host {
+	all: initial;
+}
+body > *:not(#e2c--host) {
+	-webkit-transition: transform 500ms ease-in-out;
+	transition: transform 500ms ease-in-out;
+}
+.e2c--body-open {
+	box-sizing: content-box;
+	overflow: scroll;
+	padding-right: 300px;
+	width: 100%;
+}
+
+.e2c--input-alert {
+	-webkit-animation: input-alert 1s infinite ease-in-out;
+	animation: input-alert 1s infinite ease-in-out;
+}
+
+@-webkit-keyframes input-alert {
+	0% { color: inherit; }
+	25% { color: #00A1E0; }
+	50% { color: #00A1E0; }
+	100% { color: inherit; }
+}
+@keyframes input-alert {
+	0% { color: inherit; }
+	25% { color: #00A1E0; }
+	50% { color: #00A1E0; }
+	100% { color: inherit; }
+}
+
+#oneHeader .oneUserProfileCardTrigger {
+	margin-right: 40px !important;
+}
